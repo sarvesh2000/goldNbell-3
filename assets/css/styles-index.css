@@ -4,7 +4,6 @@
     height: 65px;
     /*background-color: rgb(252, 223, 3);*/
     background-color: #080706;
-    margin-bottom: 0px;
 }
 .gw-navbar a{
     color: white;
@@ -13,8 +12,6 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    color: white !important;
-
 }
 button{
     color: #d1b280;
@@ -38,10 +35,23 @@ body{
     color: white;
 }
 .jumbotron{
-    background-image: url("../imgs/city-bg-2.jpg");
+    background-image: url("../imgs/taxi-bg-1.jpg");
     /*background-color: #efefef;*/
     background-repeat: no-repeat;
     background-size: cover;
+}
+.right{
+    float: right;
+    text-align: right;
+}
+.right h3:nth-of-type(2){
+    color: black;
+}
+.gw-navbar-right a:hover{
+    text-decoration: underline !important;
+    background-color: #080706 !important;
+    transition: 0.2s;
+    transition-delay: 0.1s;
 }
 .gw-booking label{
     margin-right: 5px;
@@ -73,6 +83,11 @@ body{
     background-size: contain;
 }
 .gw-banner-2-content{
+    text-align: center;
+}
+footer{
+    background-color: #2f3131;
+    color: #f9ba32;
     text-align: center;
 }
 /*For Card*/

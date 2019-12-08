@@ -14,7 +14,7 @@
    </head>
    <body>
       <!--Navbar-->
-      <nav class="navbar navbar-inverse gw-navbar">
+      <nav class="navbar gw-navbar">
          <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -24,9 +24,6 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand" href="index.html">
-                  <img src="assets/imgs/frontal-taxi-cab.png" alt="brand-image">
-               </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -34,7 +31,7 @@
                   <li><a href="index.html">Gadwick Taxis</a></li>
                </ul>
                <ul class="nav navbar-nav navbar-right gw-navbar-right">
-                  <li class="active"><a href="#">Home</a></li>
+                  <li class="active"><a href="index.html">Home</a></li>
                   <li><a href="login.html">Login</a></li>
                   <li><a href="#">Sign Up</a></li>
                </ul>
@@ -44,46 +41,55 @@
          <!-- /.container-fluid -->
       </nav>
       <!--Main Banner-->
-      <div class="gw-main-banner">
-         <div class="jumbotron">
+         <div class="jumbotron overlay">
             <div class="container gw-banner-content">
-               <h1 style="color: black;">Get Cheap and affordable Taxis around Gadwick in an instant</h1>
-               <form class="form gw-booking">
-                  <div class="form-group">
-                     <label for="from">From</label>
-                     <input type="text" class="form-control" id="from" placeholder="Enter pickup location">
+               <h1>Get Cheap and affordable Taxis around Gadwick in an instant</h1>
+               <div class="row">
+                  <div class="col-sm-6">
+                     <form class="form gw-booking">
+                        <div class="form-group">
+                           <label for="from">From</label>
+                           <input type="text" class="form-control" id="from" placeholder="Enter pickup location">
+                        </div>
+                        <div class="form-group">
+                           <label for="to">To</label>
+                           <input type="text" class="form-control" id="to" placeholder="Enter drop location">
+                        </div>
+                        <div class="form-group">
+                           <label for="passengers">Number of Passengers</label>
+                           <select class="form-control" id="passengers">
+                              <option>...</option>
+                              <option name="passengers" value="1">1</option>
+                              <option name="passengers" value="2">2</option>
+                              <option name="passengers" value="3">3</option>
+                              <option name="passengers" value="4">4</option>
+                              <option name="passengers" value="5">5</option>
+                              <option name="passengers" value="6">6</option>
+                              <option name="passengers" value="7">7</option>
+                              <option name="passengers" value="8">8</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="journey">Journey</label>
+                           <select class="form-control" id="journey">
+                           <option>...</option>
+                           <option>One Way</option>
+                           <option>Return</option>
+                           </select>
+                        </div>
+                        <button class="btn btn-primary">Book Now!</button>
+                     </form>
                   </div>
-                  <div class="form-group">
-                     <label for="to">To</label>
-                     <input type="text" class="form-control" id="to" placeholder="Enter drop location">
+                  <div class="col-sm-6 right">
+                     <div class="container-small">
+                        <h2>For instant bookings and enquiries</h2>
+                        <h3>Contact </h3>
+                        <h3>+91 9791 201860</h3>
+                     </div>
                   </div>
-                  <div class="form-group">
-                     <label for="passengers">Number of Passengers</label>
-                     <select class="form-control" id="passengers">
-                        <option>...</option>
-                        <option name="passengers" value="1">1</option>
-                        <option name="passengers" value="2">2</option>
-                        <option name="passengers" value="3">3</option>
-                        <option name="passengers" value="4">4</option>
-                        <option name="passengers" value="5">5</option>
-                        <option name="passengers" value="6">6</option>
-                        <option name="passengers" value="7">7</option>
-                        <option name="passengers" value="8">8</option>
-                     </select>
-                  </div>
-                  <div class="form-group">
-                     <label for="journey">Journey</label>
-                     <select class="form-control" id="journey">
-                     <option>...</option>
-                     <option>One Way</option>
-                     <option>Return</option>
-                     </select>
-                  </div>
-                  <button class="btn btn-primary">Book Now!</button>
-               </form>
+               </div>
             </div>
          </div>
-      </div>
       <!--End of Banner-->
    <!--Banner 2-Track Rides -->  
    <div class="jumbotron gw-banner-2">
@@ -118,6 +124,7 @@
                  </div>
              </div>
      </div>
+     <!--Footer 1-->
      <div class="container-fluid gw-container-2">
       <div class="card">
           <div class="card-body">
@@ -141,6 +148,21 @@
           </div>
          </div>
       </div>
+      <!--End of Footer 1-->
+      <!--Footer-2-->
+      <footer>
+         <div class="row">
+            <div class="col-sm-4">
+               <h3>TERMS & CONDITIONS</h3>
+            </div>
+            <div class="col-sm-4">
+               <h3>REFUND POLICY</h3>
+            </div>
+            <div class="col-sm-4">
+               <h3>CUSTOMER SERVICE</h3>
+            </div>
+         </div>
+      </footer>
       <!--jQuery-->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <!--Bootstrap JS-->
