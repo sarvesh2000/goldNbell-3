@@ -1,0 +1,91 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+.gw-navbar{
+    height: 65px;
+    /*background-color: rgb(252, 223, 3);*/
+    background-color: #080706;
+    margin-bottom: 0px;
+}
+.gw-navbar a{
+    color: white;
+}
+.gw-navbar-right{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white !important;
+
+}
+button{
+    color: #d1b280;
+}
+.gw-main-banner{
+    min-height: 590px !important;
+    border: 1px solid;
+    box-shadow: 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background: #efefef;
+    /*background: #22c1c3;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background-image: url("../imgs/taxi-bg.jpg");*/
+}
+body{
+    background-color: #efefef;
+}
+.gw-banner-content{
+    margin: 150px 0px;
+    color: white;
+}
+.jumbotron{
+    background-image: url("../imgs/city-bg-2.jpg");
+    /*background-color: #efefef;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gw-booking label{
+    margin-right: 5px;
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: larger;
+}
+.col-sm-3 h3{
+    text-align: center;
+}
+.col-sm-3 p{
+    text-align: center;
+}
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+.gw-container-2{
+    margin-top: 20px;
+}
+.gw-navbar-left{
+    font-size: 20px;
+    font-weight: 600;
+}
+.gw-banner-2{
+    margin-top: 30px;
+    background: url("https://www.balena.io/blog/content/images/2018/12/2018-01_GPS_tracking.jpg");
+    background-size: contain;
+}
+.gw-banner-2-content{
+    text-align: center;
+}
+/*For Card*/
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #594d46;
+  color: #efefef;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+    padding: 2px 16px;
+}
