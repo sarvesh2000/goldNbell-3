@@ -24,12 +24,10 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                </button>
+               <a class="navbar-brand" href="index.html">Gadwick Taxis</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-               <ul class="nav navbar-nav gw-navbar-left">
-                  <li><a href="index.html">Gadwick Taxis</a></li>
-               </ul>
                <ul class="nav navbar-nav navbar-right gw-navbar-right">
                   <li class="active"><a href="index.html">Home</a></li>
                   <li><a href="login.html">Login</a></li>
@@ -41,7 +39,7 @@
          <!-- /.container-fluid -->
       </nav>
       <!--Main Banner-->
-         <div class="jumbotron overlay">
+         <div class="jumbotron">
             <div class="container gw-banner-content">
                <h1>Get Cheap and affordable Taxis around Gadwick in an instant</h1>
                <div class="row">
@@ -49,11 +47,11 @@
                      <form class="form gw-booking">
                         <div class="form-group">
                            <label for="from">From</label>
-                           <input type="text" class="form-control" id="from" placeholder="Enter pickup location">
+                           <input type="text" class="form-control autocomplete" id="from" placeholder="Enter pickup location">
                         </div>
                         <div class="form-group">
                            <label for="to">To</label>
-                           <input type="text" class="form-control" id="to" placeholder="Enter drop location">
+                           <input type="text" class="form-control autocomplete" id="to" placeholder="Enter drop location">
                         </div>
                         <div class="form-group">
                            <label for="passengers">Number of Passengers</label>
@@ -78,15 +76,18 @@
                            </select>
                         </div>
                         <button class="btn btn-primary">Book Now!</button>
-                     </form>
                   </div>
                   <div class="col-sm-6 right">
-                     <div class="container-small">
-                        <h2>For instant bookings and enquiries</h2>
-                        <h3>Contact </h3>
-                        <h3>+91 9791 201860</h3>
-                     </div>
+                        <div class="form-group return1" style="display: none;">
+                              <label for="from">From</label>
+                              <input type="text" class="form-control autocomplete" id="from1" placeholder="Enter pickup location">
+                        </div>
+                        <div class="form-group return1" style="display: none;">
+                              <label for="to">To</label>
+                              <input type="text" class="form-control autocomplete" id="to1" placeholder="Enter drop location">
+                        </div>      
                   </div>
+               </form>
                </div>
             </div>
          </div>
@@ -131,7 +132,7 @@
               <div class="container" id="container2">
                   <div class="row">
                       <div class="col-md-4">
-                          <strong>Address</strong>
+                          <strong>Address</strong><br>
                           <div id="map"></div>
                       </div>
                       <div class="col-md-4">
@@ -167,6 +168,8 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <!--Bootstrap JS-->
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+      <!--Return Script-->
+      <script src="assets/js/return.js"></script>
       <script>
          // Initialize and add the map
          function initMap() {
@@ -183,8 +186,8 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&callback=initMap">
  </script>
       <!--Place AutoComplete Script-->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&amp;libraries=places&amp;callback=initAutocomplete" async="" defer=""></script>
-      <script type="text/javascript">
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&amp;libraries=places&amp;callback=initialize" async="" defer=""></script>
+      <!--<script type="text/javascript">
          function initAutocomplete() {
            // Create the autocomplete object, restricting the search to geographical
            // location types.
@@ -200,11 +203,28 @@
          function fillInAddress() {
            // Get the place details from the autocomplete object.
            var place = autocomplete.getPlace();
-       
          }
+      </script>-->
+      <script>
+         function initialize() {
+
+var acInputs = document.getElementsByClassName("autocomplete");
+
+for (var i = 0; i < acInputs.length; i++) {
+
+    var autocomplete = new google.maps.places.Autocomplete(acInputs[i]);
+    autocomplete.inputId = acInputs[i].id;
+
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        document.getElementById("log").innerHTML = 'You used input with id ' + this.inputId;
+    });
+}
+}
+
       </script>
+      <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&amp;libraries=places&amp;callback=initAutocomplete1" async="" defer=""></script>
       <script type="text/javascript">
-         function initAutocomplete() {
+         function initAutocomplete1() {
              // Create the autocomplete object, restricting the search to geographical
              // location types.
              autocomplete = new google.maps.places.Autocomplete(
@@ -220,6 +240,6 @@
                // Get the place details from the autocomplete object.
               var place = autocomplete.getPlace();          
            }
-     </script>
+     </script>-->
    </body>
 </html>
