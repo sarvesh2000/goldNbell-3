@@ -36,7 +36,7 @@ body{
     background-color: #efefef;
 }
 .gw-banner-content{
-    margin: 150px 0px;
+    margin: 0px 0px;
     color: white;
 }
 .jumbotron{
@@ -86,6 +86,12 @@ body{
     margin-top: 30px;
     background: url("https://www.balena.io/blog/content/images/2018/12/2018-01_GPS_tracking.jpg");
     background-size: contain;
+}
+#return-date{
+    color: #080706;
+}
+footer{
+    margin-top: 5px;
 }
 .gw-banner-2-content{
     text-align: center;
