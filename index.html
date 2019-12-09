@@ -4,11 +4,15 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Book cheap taxis and Minicabs online | Gadwick Taxi Quote</title>
+      <title>Book cheap taxis and Minicabs online | Gadwick Taxi</title>
       <!--Bootstrap CSS-->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
       <!--Bootstrap Themes-->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+      <!--jQuery-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <!--Bootstrap JS-->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
       <!--Custom CSS-->
       <link rel="stylesheet" href="assets/css/styles-index.css">
    </head>
@@ -52,6 +56,32 @@
                         <div class="form-group">
                            <label for="to">To</label>
                            <input type="text" class="form-control autocomplete" id="to" placeholder="Enter drop location">
+                        </div>
+                        <div class="form-group">
+                           <label for="via">Add Via Point</label>
+                           <!-- Trigger/Open The Modal -->
+                    <button type="button" class="btn btn-default" id="myBtn" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <h2>Modal Header</h2>
+                            </div>
+                            <div class="modal-body">
+                                <button class="btn btn-danger btn-lg btn-block">Add Via Point1</button>
+                                <button class="btn btn-danger btn-lg btn-block">Add Via Point2</button>
+                            </div>
+                            <div class="modal-footer">
+                                <h3>Modal Footer</h3>
+                            </div>
+                        </div>
+
+                    </div>
                         </div>
                         <div class="form-group">
                            <label for="passengers">Number of Passengers</label>
@@ -183,12 +213,10 @@
             </div>
          </div>
       </footer>
-      <!--jQuery-->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <!--Bootstrap JS-->
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
       <!--Return Script-->
       <script src="assets/js/return.js"></script>
+      <!--Modal Script-->
+      <script src="assets/js/modal.js"></script>
       <script>
          // Initialize and add the map
          function initMap() {
