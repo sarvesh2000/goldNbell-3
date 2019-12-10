@@ -72,6 +72,8 @@ body{
 }
 .gw-container-2{
     margin-top: 20px;
+    background-color: #594d46;
+    color: white;
 }
 .gw-navbar-left{
     font-size: 20px;
@@ -113,9 +115,9 @@ footer a:hover{
   font-weight: 700;
 }
 /*For Card*/
-.card {
+/*.card {
   /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   background-color: #594d46;
   color: #efefef;
@@ -125,7 +127,7 @@ footer a:hover{
 }
 .container {
     padding: 2px 16px;
-}
+}*/
 /*Modal CSS*/
 /* The Modal (background) */
 .modal {
