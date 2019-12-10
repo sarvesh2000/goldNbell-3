@@ -35,7 +35,7 @@
                <ul class="nav navbar-nav navbar-right gw-navbar-right">
                   <li class="active"><a href="index.html">Home</a></li>
                   <li><a href="login.html">Login</a></li>
-                  <li><a href="#">Sign Up</a></li>
+                  <li><a href="signup.html">Sign Up</a></li>
                </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -73,11 +73,13 @@
                                 <h2>Modal Header</h2>
                             </div>
                             <div class="modal-body">
-                                <button class="btn btn-danger btn-lg btn-block">Add Via Point1</button>
-                                <button class="btn btn-danger btn-lg btn-block">Add Via Point2</button>
+                                <button  type="button" class="btn btn-danger btn-lg btn-block viabtn">Add Via Point 1</button>
+                                <input type="text" class="form-control autocomplete" id="via1" placeholder="Enter Via Point 1" style="display: none;">
+                                <button type="button" class="btn btn-danger btn-lg btn-block viabtn" style="display: none;">Add Via Point 2</button>
+                                <input type="text" class="form-control autocomplete" id="via2" placeholder="Enter Via Point 2" style="display: none;">
                             </div>
                             <div class="modal-footer">
-                                <h3>Modal Footer</h3>
+                                <button type="button" class="btn btn-warning" id="modal-finish">Finish</button>
                             </div>
                         </div>
 
@@ -179,22 +181,18 @@
       <div class="card">
           <div class="card-body">
               <div class="container" id="container2">
-                  <div class="row">
-                      <div class="col-md-4">
-                          <strong>Address</strong><br>
-                          <div id="map"></div>
+                 <h3 style="text-align: center;">Our Services</h3>
+                  <div class="row" style="text-align: center;">
+                      <div class="col-md-6">
+                        <p>Heathrow Taxi</p>
+                        <p>Airport Taxi</p>
                       </div>
-                      <div class="col-md-4">
-                              <img src="https://img.icons8.com/android/96/000000/phone.png"><strong>Phone</strong>
-                              <p class="lead">+91 97912 01860</p>
-                      </div>
-                      <div class="col-md-4">
-                              <img src="https://img.icons8.com/wired/64/000000/email.png" class="img-fluid"><strong>Email</strong>
-                              <p class="lead"><a href="mailto:sarvesh4232@gmail.com">sarvesh4232@gmail.com</a></p>
+                      <div class="col-md-6">
+                        <p>Mini Taxi</p>
+                        <p>London Taxi</p>
                       </div>
                   </div>
               </div>
-              
           </div>
          </div>
       </div>
@@ -203,13 +201,13 @@
       <footer>
          <div class="row">
             <div class="col-sm-4">
-               <h3>TERMS & CONDITIONS</h3>
+               <a href="terms.html"><h3>TERMS & CONDITIONS</h3></a>
             </div>
             <div class="col-sm-4">
-               <h3>REFUND POLICY</h3>
+               <a href="refund.html"><h3>REFUND POLICY</h3></a>
             </div>
             <div class="col-sm-4">
-               <h3>CUSTOMER SERVICE</h3>
+               <a href="customer.html"><h3>CUSTOMER SERVICE</h3></a>
             </div>
          </div>
       </footer>
@@ -217,76 +215,25 @@
       <script src="assets/js/return.js"></script>
       <!--Modal Script-->
       <script src="assets/js/modal.js"></script>
-      <script>
-         // Initialize and add the map
-         function initMap() {
-           // The location of Uluru
-           var uluru = {lat: 13.020942, lng: 80.217351};
-           // The map, centered at Uluru
-           var map = new google.maps.Map(
-               document.getElementById('map'), {zoom: 15, center: uluru});
-           // The marker, positioned at Uluru
-           var marker = new google.maps.Marker({position: uluru, map: map});
-         }
- </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&callback=initMap">
- </script>
+      <!--Via Script-->
+      <script src="assets/js/via.js"></script>
       <!--Place AutoComplete Script-->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&amp;libraries=places&amp;callback=initialize" async="" defer=""></script>
-      <!--<script type="text/javascript">
-         function initAutocomplete() {
-           // Create the autocomplete object, restricting the search to geographical
-           // location types.
-           autocomplete = new google.maps.places.Autocomplete(
-               /** @type {!HTMLInputElement} */(document.getElementById('from')),
-               {types: ['geocode']});
-       
-           // When the user selects an address from the dropdown, populate the address
-           // fields in the form.
-           autocomplete.addListener('place_changed', fillInAddress);
-         }
-       
-         function fillInAddress() {
-           // Get the place details from the autocomplete object.
-           var place = autocomplete.getPlace();
-         }
-      </script>-->
       <script>
-         function initialize() {
+      function initialize() {
 
-var acInputs = document.getElementsByClassName("autocomplete");
+         var acInputs = document.getElementsByClassName("autocomplete");
 
-for (var i = 0; i < acInputs.length; i++) {
+         for (var i = 0; i < acInputs.length; i++) {
 
-    var autocomplete = new google.maps.places.Autocomplete(acInputs[i]);
-    autocomplete.inputId = acInputs[i].id;
+            var autocomplete = new google.maps.places.Autocomplete(acInputs[i]);
+            autocomplete.inputId = acInputs[i].id;
 
-    google.maps.event.addListener(autocomplete, 'place_changed', function () {
-        document.getElementById("log").innerHTML = 'You used input with id ' + this.inputId;
-    });
-}
-}
-
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+               document.getElementById("log").innerHTML = 'You used input with id ' + this.inputId;
+            });
+         }
+      }
       </script>
-      <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&amp;libraries=places&amp;callback=initAutocomplete1" async="" defer=""></script>
-      <script type="text/javascript">
-         function initAutocomplete1() {
-             // Create the autocomplete object, restricting the search to geographical
-             // location types.
-             autocomplete = new google.maps.places.Autocomplete(
-             /** @type {!HTMLInputElement} */(document.getElementById('to')),
-                  {types: ['geocode']});
-             
-             // When the user selects an address from the dropdown, populate the address
-            // fields in the form.
-               autocomplete.addListener('place_changed', fillInAddress);
-            }
-             
-            function fillInAddress() {
-               // Get the place details from the autocomplete object.
-              var place = autocomplete.getPlace();          
-           }
-     </script>-->
    </body>
 </html>

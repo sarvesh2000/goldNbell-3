@@ -70,11 +70,6 @@ body{
 .col-sm-3 p{
     text-align: center;
 }
-#map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-}
 .gw-container-2{
     margin-top: 20px;
 }
@@ -100,6 +95,22 @@ footer{
     background-color: #2f3131;
     color: #f9ba32;
     text-align: center;
+}
+footer a{
+  color: #f9ba32;
+}
+footer a:hover{
+  color: #f9ba32;
+}
+.viabtn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.gw-container-1 .col-sm-3 p{
+  font-weight: 600;
+}
+.gw-container-1 .col-sm-3 h3{
+  font-weight: 700;
 }
 /*For Card*/
 .card {

@@ -23,3 +23,8 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+var finish= document.getElementById("modal-finish");
+finish.onclick = function(){
+    modal.style.display = "none";
+}
